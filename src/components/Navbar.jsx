@@ -36,7 +36,7 @@ import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       <li><Link href={"/"}>Home</Link></li>
-      <li><Link href={"/profile"}>Profile</Link></li>
+      <li><Link href={!user?"/api/auth/login":"/profile"}>Profile</Link></li>
     </ul>
   </div>
   <div className="navbar-end flex gap-4 items-center">
